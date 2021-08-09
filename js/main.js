@@ -211,7 +211,7 @@ $(document).ready(function () {
 
 if ( $(window).width() > 999) {
 $(document).ready(function(){
-    $(".sticky-header").floatThead({top:0});
+   // $(".sticky-header").floatThead({top:0});
 });
 }
 

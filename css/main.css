@@ -804,35 +804,11 @@ span.values_down{
 	background: #f7dae1;
 }
 
-.column7 span {
-	width: 35px;
-	display: inline-block;
-	padding: 5px 0;
-}
-
-
-.column8 span {
-	max-width: 70px;
-	width: 100%;
-	    min-width: 60px;
-	display: block;
-	padding: 5px 0;
-}
-
-.column9 span {
-	width: 40px;
-	display: inline-block;
-	padding: 5px 0;
-}
-
 
 span.values {
 	padding: 0;
 }
 
-.column6, .column5, .column7, .column8, .column9 {
-	text-align: center;
-}
 
 .dates_current {
 	border-bottom: 2px solid #f1478b;
@@ -846,9 +822,7 @@ span.values {
 	text-align: center;
 }
 
-.maintable tr {
-	border-bottom: 1px solid #ebebeb;
-}
+
 
 .maintable td  {
 		padding: 5px 0;
@@ -1727,14 +1701,11 @@ a, a * {
 
 
 .column8 span {
-    max-width: 35px;
-        min-width: 35px;
       display: inline-block;
     padding: 5px 0;
 }
 
-.column9 span {
-    width: 35px;
+.column span {
     display: inline-block;
     padding: 5px 0;
 }
@@ -1748,3 +1719,127 @@ a, a * {
 .column2 span {
     font-weight: bold;
 }
+
+
+.maintable .column1 span {
+    text-align: center;
+}
+
+.column6 span {
+    width: initial;
+}
+
+.maintable thead tr:last-child td {
+    background: #daeee9;
+    border-left: 1px solid #fff;
+}
+
+.maintable tbody tr {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.maintable tbody td {
+    padding: 15px 0;
+}
+
+.maintable thead td span {
+    white-space: nowrap;
+}
+
+.column5 span {
+
+    margin: auto;
+}
+
+.dates_current {
+    border-bottom: 3px solid #f1478b;
+        font-weight: initial;
+}
+
+.maintable thead tr:first-child td {
+    background: #02b785;
+}
+
+span.values_none {
+    line-height: 19px;
+}
+
+.maintable tbody td span {
+    vertical-align: middle;
+    line-height: 30px;
+
+}
+
+
+
+.maintable span.valueitems {
+    display: flex;
+}
+
+span.values {
+    width: 35px;
+    min-width: 35px;
+    margin: 0 1px;
+    overflow: hidden;
+     padding: 0 5px;
+       height: 30px;
+}
+span.valueitems__item {
+    position: relative;
+    width: 35px;
+     margin: 0 1px; 
+    height: 30px;
+
+}
+
+span.values:hover {
+    width: initial;
+    position: absolute;
+    z-index: 3;
+    top: 2px;
+}
+
+
+span.dates {
+       width: 35px;
+   
+}
+
+
+span.valueitems__item {
+    padding: 0;
+}
+
+span.valueitems {
+    padding: 0;
+}
+
+td.column8 {
+    width: 222px;
+}
+
+td.column9 {
+    width: 322px;
+}
+
+td.column10 {
+    text-align: center;
+}
+
+tbody td.column2 span {
+    width: 105px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+tbody td.column2 span:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 26px;
+    background: linear-gradient(270deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+
