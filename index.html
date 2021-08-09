@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ru">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title></title>
+      <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+      <link rel="stylesheet" type="text/css" href="/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" type="text/css" href="/css/slick.css">
+      <link rel="stylesheet" type="text/css" href="/css/slick-theme.css">
+      <link rel="stylesheet" type="text/css" href="/libs/lightbox/css/lightbox.min.css">
+      <link rel="stylesheet" href="/css/animation.css">
+      <link rel="stylesheet" type="text/css" href="/css/main.css">
+      <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <header id="header" class="header clearfix">
+				<div class="container">
+					<div class="headeritems">
+						<div class="headeritems__items">
+							<div class="headeritems__logo">
+								<div class="logo nologo"></div>
+							</div>
+							<div class="headeritems__menu">
+								<div class="mainmenu">
+									<ul>
+										<li class="active"><a href=""><span>Holder Count analytics</span></a></li>
+										<li><a href=""><span>Top holder gainers</span></a></li>
+										<li><a href=""><img src="/images/star.png" alt=""><span>my watch list</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="headeritems__socials">
+								<div class="socials">
+									<div class="socials__item"><a href=""><img src="/images/twitter.png" alt=""></a></div>
+								</div>
+							</div>
+							<div class="headeritems__search">
+								<div class="search">
+                    <form action="">
+                      <input type="text" placeholder="Search by ticker or contact">
+                      <button type="submit">
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <g> <path fill="#4f4f4e" d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848S326.847,409.323,225.474,409.323z"></path> </g> </g> <g> <g> <path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"></path> </g> </g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> </svg>
+                      </button>
+                    </form>
+                    	</div>
+							</div>
+							<div class="headeritems__login">
+								<div class="login">
+									<div class="login__items">
+										<div class="login__name">
+											<a href="">
+												<img src="/images/login.png" alt=""><span>Ivan77</span>
+											</a>
+										</div>
+										<div class="login__out">
+											<a href="">Sign out</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+      </header>
+      <main>
+		<div class="content">
+			<div class="container">
+				<div class="title">
+					<div class="row">
+							<div class="col-md-8">
+								<h1>Holder Count analytics</h1>
+							</div>
+						
+					</div>
+				</div>
+
+				<div class="filter">
+					<div class="filter__content">
+						<div class="filter__title">Filter</div>
+						<form action="">
+						<div class="filter__items">		 
+							<div class="filter__item">
+								<div class="filterminmax">
+									<div class="filterminmax__captions">
+										<div class="filterminmax__caption">&nbsp;</div>
+										<div class="filterminmax__caption">Min</div>
+										<div class="filterminmax__caption">Max</div>
+									</div>
+									<div class="filterminmax__items filterblock__items">
+										<div class="filterminmax__item filterblock__item">
+											<div class="filter__coltitle">Holders</div>
+											<div class="filter__input filterminmax__input_min"><input type="text"></div>
+											<div class="filter__input filterminmax__input_maz"><input type="text"></div>
+										</div>
+										<div class="filterminmax__item filterblock__item">
+											<div class="filter__coltitle">Volume</div>
+											<div class="filter__input filterminmax__input_min"><input type="text"></div>
+											<div class="filter__input filterminmax__input_maz"><input type="text"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="filter__item">
+								<div class="filterblock__items">
+									<div class="filterblock__item">
+										<div class="filter__coltitle">1h</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">2h</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">3h</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">4h</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">5h</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">6h</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									
+								</div>
+							</div>
+
+
+							<div class="filter__item">
+								<div class="filterblock__items">
+									<div class="filterblock__item">
+										<div class="filter__coltitle">1d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">2d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">3d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">4d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">5d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">6d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">7d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">8d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+									<div class="filterblock__item">
+										<div class="filter__coltitle">9d</div>
+											<div class="filter__input"><input type="text"></div>
+									</div>
+								</div>	
+
+							</div>	
+
+
+						</div>
+						<div class="filter__buttons">
+							<div class="filter__items">		 
+								<div class="filter__item">
+									<div class="filterminmax">
+										<div class="filterminmax__captions">
+											<div class="filterminmax__caption">&nbsp;</div>
+										</div>
+										<div class="filterminmax__items filterblock__items">
+											<div class="filterminmax__item filterblock__item">
+												<button type="reset" class="btn-main btn-border">Reset</button>
+											</div>
+											<div class="filterminmax__item filterblock__item">
+												<button type="submit" class="btn-main">Find</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+				<div class="content__main">
+					<div class="maintable">
+						<table class="sticky-header">
+							<thead>
+								<tr>
+									<td class="hcolumn1"><span>#</span></td>
+									<td class="hcolumn2"><span>NAME</span></td>
+									<td class="hcolumn3"><span>INFO</span></td>
+									<td class="hcolumn4"><span>CHANGE <br/>(24H)</span></td>
+									<td class="hcolumn5"><span>TODAY</span></td>
+									<td class="hcolumn6"><span>APR (DATES)</span></td>
+									<td class="hcolumn7"><span>2019</span></td>
+									<td class="hcolumn8"><span>2019</span></td>
+									<td class="hcolumn9"><span>2018</span></td>
+								</tr>
+								<tr>
+									<td class="column1"><span></span></td>
+									<td class="column2"><span></span></td>
+									<td class="column3"><span></span></td>
+									<td class="column4"><span></span></td>
+									<td class="column5">
+										<span class="dates dates_current">02.04.19</span>
+									</td>
+									<td class="column6">
+										<span class="dates dates_before">1-7</span>
+										<span class="dates dates_current">8-14</span>
+										<span class="dates dates_after">15-21</span>
+										<span class="dates dates_after">22-30</span>
+									</td>
+									<td class="column7">
+										<span class="dates dates_before">Jan</span>
+										<span class="dates dates_before">Feb</span>
+										<span class="dates dates_before">Mar</span>
+										<span class="dates dates_current">Apr</span>
+										<span class="dates dates_after">May</span>
+										<span class="dates dates_after">Jun</span>
+										<span class="dates dates_after">Jul</span>
+										<span class="dates dates_after">Aug</span>
+										<span class="dates dates_after">Sep</span>
+										<span class="dates dates_after">Oct</span>
+										<span class="dates dates_after">Nov</span>
+										<span class="dates dates_after">Dec</span>									
+									</td>
+									<td class="column8">
+										<span class="dates dates_current">YTD</span>
+									</td>
+									<td class="column9"><span></span></td>
+								</tr>
+							</thead>
+							<tbody>
+								
+								<tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+								<tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_minus">-19,8%</span></td>
+									<td class="column5">
+										<span class="values values_none values_large">0</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">1</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+									<td class="column1"><span>1</span></td>
+									<td class="column2"><a style="background-image: url(../images/b.png);">Bitcoin</a></td>
+									<td class="column3">
+										<span>Price: $4,389</span>
+										<span>Market Cap: $123,209,897</span>
+										<span>Volume: $87,838,374</span>									
+									</td>
+									<td class="column4"><span class="change change_plus">20,4%</span></td>
+									<td class="column5">
+										<span class="values values_up values_large">1</span>
+									</td>
+									<td class="column6">
+										<span class="values values_up values_medium">3</span>
+										<span class="values values_up values_medium">2</span>
+										<span class="values values_none values_medium">&mdash;</span>
+										<span class="values values_none values_medium">&mdash;</span>
+									</td>
+									<td class="column7">
+										<span class="values values_up values_small">3</span>
+										<span class="values values_down values_small">145</span>
+										<span class="values values_down values_small">28</span>
+										<span class="values values_up values_small">3</span>
+										<span class="values values_none values_small">&mdash;</span>
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>	
+										<span class="values values_none values_small">&mdash;</span>											
+										<span class="values values_none values_small">&mdash;</span>									
+									</td>
+									<td class="column8">
+										<span class="values values_up values_xlarge">24</span>
+									</td>
+									<td class="column9">
+										<span class="values values_up values_small">18</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="pagination">
+							<div class="pagination__link"><a href=""><span>Next 100</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+							<div class="pagination__link"><a href=""><span>View All</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	  </main>
+	  
+	  <footer id="footer" class="footer">
+	  	<div class="footer__top">
+	  		<div class="container">
+	  			<div class="subscribe">
+	  				<div class="subscribe__title">
+	  					<span>Get the week's best ICO right in your inbox</span>
+	  							</div>
+	  					<div class="subscribe__form">
+	  						<form action="">
+	  							<div class="subscribe__input"><input type="email" placeholder="Your e-mail"></div>
+	  							<div class="suscribe__btn"><input type="submit" class="btn-main" value="Subscribe"></div>
+	  						</form>
+	  					</div>
+	  				
+	  			</div>
+	  		</div>
+	  	</div>
+		<div class="footer__main">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-5">
+						<div class="footer__info">
+							<div class="copy">&copy; 2019 All rights reserved</div>
+							<div class="info">
+								<p>Our goal is to list absolutely every ICO. We do not charge money for listing.<br/> We do not hide information in favor of any ICO. </p>
+							</div>
+							<div class="empis"><a href="https://empis.ru/">Developer - EMPIS</a></div>
+						</div>
+					</div>
+					<div class="col-md-2 col-md-offset-1 ">
+						<div class="footer__socials"><a href=""  style="background-image: url(../images/fmail.png);">Tell us how to improve!</a></div>
+						<div class="footer__socials"><a href="" style="background-image: url(../images/ftwitter.png);">Twitter</a></div>
+						<div class="footer__socials"><a href="" style="background-image: url(../images/ftelegram.png);">Telegram</a></div>
+					</div>
+					<div class="col-md-4 footer__right">
+						<div class="footer__socials footer__socials_right"><a href="" style="background-image: url(../images/ftelegram.png);">Donate</a></div>
+						<div class="footer__links"><span>BTC: </span><a href="">3CMCRgEm8HVz3DrWaCCid3vAANE42jcEv9</a></div>
+						<div class="footer__links"><span>LTC: </span><a href="">LTdsVS8VDw6syvfQADdhf2PHAm3rMGJvPX</a></div>
+						<div class="footer__links"><span>ETH: </span><a href="">0x0074709077B8AE5a245E4ED161C971Dc4c3C8E2B</a></div>
+						<div class="footer__links"><span>BCH: </span><a href="">1LVXG4Z4oF6TrJfmUfSuLX8nqb8c5eCwha</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	  </footer>
+	  
+      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+      <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+	   <script type="text/javascript" src="/js/jquery.floatThead.min.js"></script>
+      <script type="text/javascript" src="/js/slick.min.js"></script>
+      <script src="/js/maskedinput.js"></script>
+      <script type="text/javascript" src="/js/main.js"></script>
+   </body>
+</html>
