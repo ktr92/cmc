@@ -1,591 +1,876 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title></title>
-      <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
-      <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
-      <link rel="stylesheet" type="text/css" href="/libs/font-awesome-4.7.0/css/font-awesome.min.css">
-      <link rel="stylesheet" type="text/css" href="/css/slick.css">
-      <link rel="stylesheet" type="text/css" href="/css/slick-theme.css">
-      <link rel="stylesheet" type="text/css" href="/libs/lightbox/css/lightbox.min.css">
-      <link rel="stylesheet" href="/css/animation.css">
-      <link rel="stylesheet" type="text/css" href="/css/main.css">
-      <!--[if lt IE 9]>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <![endif]-->
-   </head>
-   <body>
-      <header id="header" class="header clearfix">
-				<div class="container">
-					<div class="headeritems">
-						<div class="menubutton">
-                  <img src="/images/menu.png" alt="">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightbox/css/lightbox.min.css">
+    <link rel="stylesheet" href="/css/animation.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header id="header" class="header clearfix">
+      <div class="container">
+        <div class="headeritems">
+          <div class="menubutton">
+            <img src="/images/menu.png" alt="">
+          </div>
+          <div class="headeritems__items">
+            <div class="headeritems__logo">
+              <div class="logo nologo"></div>
+            </div>
+            <div class="headeritems__menu">
+              <div class="mainmenu">
+                <ul>
+                  <li class="active"><a href=""><span>Holder Count analytics</span></a></li>
+                  <li><a href=""><span>Top holder gainers</span></a></li>
+                  <li><a href=""><img src="/images/star.png" alt=""><span>my watch list</span></a></li>
+                </ul>
               </div>
-						<div class="headeritems__items">
-
-							<div class="headeritems__logo">
-								<div class="logo nologo"></div>
-							</div>
-							<div class="headeritems__menu">
-								
-								<div class="mainmenu">
-									<ul>
-										<li class="active"><a href=""><span>Holder Count analytics</span></a></li>
-										<li><a href=""><span>Top holder gainers</span></a></li>
-										<li><a href=""><img src="/images/star.png" alt=""><span>my watch list</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<div class="headeritems__socials">
-								<div class="socials">
-									<div class="socials__item"><a href=""><img src="/images/twitter.png" alt=""></a></div>
-								</div>
-							</div>
-							<div class="headeritems__search">
-								<span class="searchbutton">
-                  <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+            </div>
+            <div class="headeritems__socials">
+              <div class="socials">
+                <div class="socials__item"><a href=""><img src="/images/twitter.png" alt=""></a></div>
+              </div>
+            </div>
+            <div class="headeritems__search">
+              <span class="searchbutton">
+                <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                  <g>
                     <g>
-                      <g>
-                        <path fill="#4f4f4e" d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848S326.847,409.323,225.474,409.323z"/>
-                      </g>
+                      <path fill="#4f4f4e" d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848S326.847,409.323,225.474,409.323z"/>
                     </g>
+                  </g>
+                  <g>
                     <g>
-                      <g>
-                        <path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/>
-                      </g>
+                      <path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/>
                     </g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                    <g></g>
-                  </svg>
-                </span>
-								<div class="search">
-                    <form action="">
-                      <input type="text" placeholder="Search by ticker or contact">
-                      <button type="submit">
-                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <g> <path fill="#4f4f4e" d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848S326.847,409.323,225.474,409.323z"></path> </g> </g> <g> <g> <path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"></path> </g> </g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> <g></g> </svg>
-                      </button>
-                    </form>
-                    	</div>
-							</div>
-							<div class="headeritems__login">
-								<div class="login">
-									<div class="login__items">
-										<div class="login__name">
-											<a href="">
-												<img src="/images/login.png" alt=""><span>Ivan77</span>
-											</a>
-										</div>
-										<div class="login__out">
-											<a href="">Sign out</a></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-      </header>
-      <main>
-		<div class="content">
-			<div class="container">
-				<div class="title">
-					<div class="row">
-							<div class="col-md-8">
-								<h1>Holder Count analytics</h1>
-							</div>
-						
-					</div>
-				</div>
+                  </g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                  <g></g>
+                </svg>
+              </span>
+              <div class="search">
+                <form action="">
+                  <input type="text" placeholder="Search by ticker or contact">
+                  <button type="submit">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                      <g>
+                        <g>
+                          <path fill="#4f4f4e" d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848S326.847,409.323,225.474,409.323z"></path>
+                        </g>
+                      </g>
+                      <g>
+                        <g>
+                          <path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"></path>
+                        </g>
+                      </g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                      <g></g>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+            <div class="headeritems__login">
+              <div class="login">
+                <div class="login__items">
+                  <div class="login__name">
+                    <a href="">
+                    <img src="/images/login.png" alt=""><span>Ivan77</span>
+                    </a>
+                  </div>
+                  <div class="login__out">
+                    <a href="">Sign out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <div class="container">
+          <div class="title">
+            <div class="row">
+              <div class="col-md-8">
+                <h1>Holder Count analytics</h1>
+              </div>
+            </div>
+          </div>
+          <div class="filter">
+            <div class="filter__content">
+              <div class="filter__title">Filter</div>
+              <div class="filter__form">
+                <form action="">
+                  <div class="filter__items">
+                    <div class="filter__item">
+                      <div class="filterminmax">
+                        <div class="filterminmax__captions">
+                          <div class="filterminmax__caption">&nbsp;</div>
+                          <div class="filterminmax__caption">Min</div>
+                          <div class="filterminmax__caption">Max</div>
+                        </div>
+                        <div class="filterminmax__items filterblock__items">
+                          <div class="filterminmax__item filterblock__item">
+                            <div class="filter__coltitle">Holders</div>
+                            <div class="filter__input filterminmax__input_min"><input type="text"></div>
+                            <div class="filter__input filterminmax__input_maz"><input type="text"></div>
+                          </div>
+                          <div class="filterminmax__item filterblock__item">
+                            <div class="filter__coltitle">Volume</div>
+                            <div class="filter__input filterminmax__input_min"><input type="text"></div>
+                            <div class="filter__input filterminmax__input_maz"><input type="text"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__item">
+                      <div class="filterminmax">
+                        <div class="filterminmax__captions onlymobile">
+                          <div class="filterminmax__caption">&nbsp;</div>
+                          <div class="filterminmax__caption">Min</div>
+                        </div>
+                        <div class="filterminmax__items filterblock__items">
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">1h</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">2h</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">3h</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">4h</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">5h</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">6h</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="filter__item">
+                      <div class="filterminmax">
+                        <div class="filterminmax__captions onlymobile">
+                          <div class="filterminmax__caption">&nbsp;</div>
+                          <div class="filterminmax__caption">Min</div>
+                        </div>
+                        <div class="filterminmax__items filterblock__items">
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">1d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">2d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">3d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">4d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">5d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">6d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">7d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">8d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                          <div class="filterblock__item">
+                            <div class="filter__coltitle">9d</div>
+                            <div class="filter__input"><input type="text"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__buttons">
+                    <div class="filter__items">
+                      <div class="filter__item">
+                        <div class="filterminmax">
+                          <div class="filterminmax__captions onlydesktop">
+                            <div class="filterminmax__caption">&nbsp;</div>
+                          </div>
+                          <div class="filterminmax__items filterblock__items">
+                            <div class="filterminmax__item filterblock__item">
+                              <button type="reset" class="btn-main btn-border">Reset</button>
+                            </div>
+                            <div class="filterminmax__item filterblock__item">
+                              <button type="submit" class="btn-main">Find</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__main">
+            <div class="maintable">
+              <table class="sticky-header">
+                <thead>
+                  <tr>
+                    <td class="hcolumn1"><span>#</span></td>
+                    <td class="hcolumn2"><span>NAME</span></td>
+                    <td class="hcolumn3"><span>QUICK LINKS</span></td>
+                    <td class="hcolumn4"><span>PRICE</span></td>
+                    <td class="hcolumn5"><span>CHANGE (24H)</span></td>
+                    <td class="hcolumn6"><span>VOLUME</span></td>
+                    <td class="hcolumn7"><span>HOLDERS</span></td>
+                    <td class="hcolumn8"><span>HOLDERS CHANGE IN % (HOURS)</span></td>
+                    <td class="hcolumn9"><span>HOLDERS CHANGE IN % (DAYS)</span></td>
+                    <td class="hcolumn10"><span><img src="/images/star.png" alt=""></span></td>
+                  </tr>
+                  <tr>
+                    <td class="column1"><span></span></td>
+                    <td class="column2"><span></span></td>
+                    <td class="column3"><span></span></td>
+                    <td class="column4"><span></span></td>
+                    <td class="column5"><span></span></td>
+                    <td class="column6"><span></span></td>
+                    <td class="column7"><span></span></td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="dates dates_before">1H</span>
+                      <span class="dates dates_current">2H</span>
+                      <span class="dates dates_after">3H</span>
+                      <span class="dates dates_after">4H</span>
+                      <span class="dates dates_after">5H</span>
+                      <span class="dates dates_after">6H</span>
+                      </span>
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="dates dates_before">1D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_before">2D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_before">3D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_current">4D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_after">5D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_after">6D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_after">7D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_after">8D</span></span>
+                      <span class="valueitems__item"><span class="dates dates_after">9D</span></span>
+                      </span>
+                    </td>
+                    <td class="column10">
+                      <span></span>
+                    </td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="column1"><span>1</span></td>
+                    <td class="column2"><span>BITCOIN (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span>	</span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span>	</span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span>	</span>	
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span>	</span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">0%</span>	</span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
+                      </span>						
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">0%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      </span>						
+                    </td>
+                    <td class="column10">
+                      <span><a href=""  class="wnotadded"><img src="/images/star2.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="column1"><span>2</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_minus">-20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>	
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
+                      </span>						
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      </span>						
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="column1"><span>3</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>	
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
+                      </span>						
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      </span>						
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>	
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>	
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
+                      </span>						
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
+                      </span>						
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                              <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                              <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                              <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                              <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                              <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                              <td class="column1"><span>4</span></td>
+                    <td class="column2"><span>BITCOINMAP (BTC)</span></td>
+                    <td class="column3">
+                      <span class="maintable__image">
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
+                      <span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
+                      </span>
+                    </td>
+                    <td class="column4"><span class="change">$4,389</span></td>
+                    <td class="column5"><span class="change change_plus">20,4%</span></td>
+                    <td class="column6"><span class="change">$87,838,374</span></td>
+                    <td class="column7">
+                      <span>500</span>
+                    </td>
+                    <td class="column8">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>  
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>  
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span> 
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>  
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span> 
+                      </span>           
+                    </td>
+                    <td class="column9">
+                      <span class="valueitems">
+                      <span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
+                      <span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
+                      <span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      <span class="valueitems__item"><span class="values values_none values_small">&mdash;</span> </span>
+                      </span>           
+                    </td>
+                    <td class="column10">
+                      <span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
+                    </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            
+            </div>
 
-				<div class="filter">
-					<div class="filter__content">
-						<div class="filter__title">Filter</div>
-						<div class="filter__form">
-							
-					
-						<form action="">
-						<div class="filter__items">		 
-							<div class="filter__item">
-								<div class="filterminmax">
-									<div class="filterminmax__captions">
-										<div class="filterminmax__caption">&nbsp;</div>
-										<div class="filterminmax__caption">Min</div>
-										<div class="filterminmax__caption">Max</div>
-									</div>
-									<div class="filterminmax__items filterblock__items">
-										<div class="filterminmax__item filterblock__item">
-											<div class="filter__coltitle">Holders</div>
-											<div class="filter__input filterminmax__input_min"><input type="text"></div>
-											<div class="filter__input filterminmax__input_maz"><input type="text"></div>
-										</div>
-										<div class="filterminmax__item filterblock__item">
-											<div class="filter__coltitle">Volume</div>
-											<div class="filter__input filterminmax__input_min"><input type="text"></div>
-											<div class="filter__input filterminmax__input_maz"><input type="text"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="filter__item">
-								<div class="filterminmax">
-								<div class="filterminmax__captions onlymobile">
-										<div class="filterminmax__caption">&nbsp;</div>
-										<div class="filterminmax__caption">Min</div>
-									</div>
-									<div class="filterminmax__items filterblock__items">
-								
-									<div class="filterblock__item">
-										<div class="filter__coltitle">1h</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">2h</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">3h</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">4h</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">5h</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">6h</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									
-								</div>
-							</div>
-							</div>
-
-							<div class="filter__item">
-								<div class="filterminmax">
-								<div class="filterminmax__captions onlymobile">
-										<div class="filterminmax__caption">&nbsp;</div>
-										<div class="filterminmax__caption">Min</div>
-									</div>
-									<div class="filterminmax__items filterblock__items">
-									<div class="filterblock__item">
-										<div class="filter__coltitle">1d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">2d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">3d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">4d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">5d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">6d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">7d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">8d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-									<div class="filterblock__item">
-										<div class="filter__coltitle">9d</div>
-											<div class="filter__input"><input type="text"></div>
-									</div>
-								</div>	
-								</div>	
-							</div>	
-
-
-						</div>
-						<div class="filter__buttons">
-							<div class="filter__items">		 
-								<div class="filter__item">
-									<div class="filterminmax">
-										<div class="filterminmax__captions onlydesktop">
-											<div class="filterminmax__caption">&nbsp;</div>
-										</div>
-										<div class="filterminmax__items filterblock__items">
-											<div class="filterminmax__item filterblock__item">
-												<button type="reset" class="btn-main btn-border">Reset</button>
-											</div>
-											<div class="filterminmax__item filterblock__item">
-												<button type="submit" class="btn-main">Find</button>
-											</div>
-											
-										</div>
-									</div>
-								</div>
-							</div>
-						</form>
-							</div>
-					</div>
-				</div>
-				</div>
-				<div class="content__main">
-					<div class="maintable">
-						<table>
-							<thead>
-								<tr>
-									<td class="hcolumn1"><span>#</span></td>
-									<td class="hcolumn2"><span>NAME</span></td>
-									<td class="hcolumn3"><span>QUICK LINKS</span></td>
-									<td class="hcolumn4"><span>PRICE</span></td>
-									<td class="hcolumn5"><span>CHANGE (24H)</span></td>
-									<td class="hcolumn6"><span>VOLUME</span></td>
-									<td class="hcolumn7"><span>HOLDERS</span></td>
-									<td class="hcolumn8"><span>HOLDERS CHANGE IN % (HOURS)</span></td>
-									<td class="hcolumn9"><span>HOLDERS CHANGE IN % (DAYS)</span></td>
-									<td class="hcolumn10"><span><img src="/images/star.png" alt=""></span></td>
-								</tr>
-								<tr>
-									<td class="column1"><span></span></td>
-									<td class="column2"><span></span></td>
-									<td class="column3"><span></span></td>
-									<td class="column4"><span></span></td>
-									<td class="column5"><span></span></td>
-									<td class="column6"><span></span></td>
-									<td class="column7"><span></span></td>
-									
-									<td class="column8">
-										<span class="valueitems">
-										<span class="dates dates_before">1H</span>
-										<span class="dates dates_current">2H</span>
-										<span class="dates dates_after">3H</span>
-										<span class="dates dates_after">4H</span>
-										<span class="dates dates_after">5H</span>
-										<span class="dates dates_after">6H</span>
-										</span>
-									</td>
-									<td class="column9">
-										<span class="valueitems">
-											<span class="valueitems__item"><span class="dates dates_before">1D</span></span>
-											<span class="valueitems__item"><span class="dates dates_before">2D</span></span>
-											<span class="valueitems__item"><span class="dates dates_before">3D</span></span>
-											<span class="valueitems__item"><span class="dates dates_current">4D</span></span>
-											<span class="valueitems__item"><span class="dates dates_after">5D</span></span>
-											<span class="valueitems__item"><span class="dates dates_after">6D</span></span>
-											<span class="valueitems__item"><span class="dates dates_after">7D</span></span>
-											<span class="valueitems__item"><span class="dates dates_after">8D</span></span>
-											<span class="valueitems__item"><span class="dates dates_after">9D</span></span>
-										</span>
-											
-									</td>
-									<td class="column10">
-										<span></span>
-									</td>
-								</tr>
-							</thead>
-							<tbody>
-								
-								<tr>
-									<td class="column1"><span>1</span></td>
-									<td class="column2"><span>BITCOIN (BTC)</span></td>
-									<td class="column3">
-										<span class="maintable__image">
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
-										</span>
-									</td>
-									<td class="column4"><span class="change">$4,389</span></td>
-									<td class="column5"><span class="change change_plus">20,4%</span></td>
-									<td class="column6"><span class="change">$87,838,374</span></td>
-									<td class="column7">
-										<span>500</span>
-									</td>
-									
-									<td class="column8">
-											<span class="valueitems">
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span>	</span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-3%</span>	</span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-2%</span>	</span>	
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span>	</span>	
-										<span class="valueitems__item"><span class="values values_none values_small">0%</span>	</span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
-											</span>						
-									</td>
-
-									<td class="column9">
-										<span class="valueitems">
-											<span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
-											<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">0%</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-										</span>						
-									</td>
-
-									
-									
-									<td class="column10">
-										<span><a href=""  class="wnotadded"><img src="/images/star2.png" alt=""></a></span>
-									</td>
-								</tr>
-								<tr>
-									<td class="column1"><span>2</span></td>
-									<td class="column2"><span>BITCOINMAP (BTC)</span></td>
-									<td class="column3">
-										<span class="maintable__image">
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
-										</span>
-									</td>
-									<td class="column4"><span class="change">$4,389</span></td>
-									<td class="column5"><span class="change change_minus">-20,4%</span></td>
-									<td class="column6"><span class="change">$87,838,374</span></td>
-									<td class="column7">
-										<span>500</span>
-									</td>
-									
-									<td class="column8">
-											<span class="valueitems">
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>	
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
-											</span>						
-									</td>
-
-									<td class="column9">
-										<span class="valueitems">
-											<span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
-											<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-										</span>						
-									</td>
-
-									
-									
-									<td class="column10">
-										<span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
-									</td>
-								</tr>
-								<tr>
-									<td class="column1"><span>3</span></td>
-									<td class="column2"><span>BITCOINMAP (BTC)</span></td>
-									<td class="column3">
-										<span class="maintable__image">
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
-										</span>
-									</td>
-									<td class="column4"><span class="change">$4,389</span></td>
-									<td class="column5"><span class="change change_plus">20,4%</span></td>
-									<td class="column6"><span class="change">$87,838,374</span></td>
-									<td class="column7">
-										<span>500</span>
-									</td>
-									
-									<td class="column8">
-											<span class="valueitems">
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>	
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
-											</span>						
-									</td>
-
-									<td class="column9">
-										<span class="valueitems">
-											<span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
-											<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-										</span>						
-									</td>
-
-									
-									
-									<td class="column10">
-										<span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
-									</td>
-								</tr>
-								<tr>
-									<td class="column1"><span>4</span></td>
-									<td class="column2"><span>BITCOINMAP (BTC)</span></td>
-									<td class="column3">
-										<span class="maintable__image">
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img1.png" alt="Twitter" title="Twitter"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img2.png" alt="Etherscan" title="Etherscan"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img3.png" alt="Dextools" title="Dextools"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img4.png" alt="Bloxy" title="Bloxy"></a></span>
-											<span class="maintable__img"><a href="" target="_blank"><img src="/images/img5.png" alt="Tracking tool for Twitter" title="Tracking tool for Twitter"></a></span>
-										</span>
-									</td>
-									<td class="column4"><span class="change">$4,389</span></td>
-									<td class="column5"><span class="change change_plus">20,4%</span></td>
-									<td class="column6"><span class="change">$87,838,374</span></td>
-									<td class="column7">
-										<span>500</span>
-									</td>
-									
-									<td class="column8">
-											<span class="valueitems">
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>	
-										<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>	
-										<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>	
-										<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>	
-											</span>						
-									</td>
-
-									<td class="column9">
-										<span class="valueitems">
-											<span class="valueitems__item"><span class="values values_up values_small">33333%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-3%</span></span>
-											<span class="valueitems__item"><span class="values values_down values_small">-2%</span></span>
-											<span class="valueitems__item"><span class="values values_up values_small">3%</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span></span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-											<span class="valueitems__item"><span class="values values_none values_small">&mdash;</span>	</span>
-										</span>						
-									</td>
-
-									
-									
-									<td class="column10">
-										<span><a href="" class="wadded"><img src="/images/star3.png" alt=""></a></span>
-									</td>
-								</tr>
-								
-							</tbody>
-						</table>
-						<!--<div class="pagination">
-							<div class="pagination__link"><a href=""><span>Next 100</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
-							<div class="pagination__link"><a href=""><span>View All</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
-						</div>-->
-					
-					</div>
-						<div class="paginator">	
-								<div class="paginator__content">
-									<div class="paginator__title">Pages: </div>
-									<div class="paginator__items">
-										<ul>
-											<li class="active"><a href=""><span>1</span></a></li>
-											<li><a href=""><span>2</span></a></li>
-											<li><a href=""><span>3</span></a></li>
-											<li><span>...</span></li>
-											<li><a href=""><span>23</span></a></li>
-										</ul>
-									</div>
-								</div>
-							</div>	
-				</div>
-			</div>
-		</div>
-	  </main>
-	  
-	  <footer id="footer" class="footer">
-	  	<div class="footer__top">
-	  		<div class="container">
-	  			<div class="subscribe">
-	  				<div class="subscribe__title">
-	  					<span>You think this product can be improved? Write us a message.</span>
-	  							</div>
-	  					<div class="subscribe__form">
-	  						<form action="">
-	  							<!--<div class="subscribe__input"><input type="email" placeholder="Your e-mail"></div>-->
-	  							<div class="suscribe__btn"><input type="submit" class="btn-main" value="Contact"></div>
-	  						</form>
-	  					</div>
-	  				
-	  			</div>
-	  		</div>
-	  	</div>
-		<div class="footer__main">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-7">
-						<div class="footer__info">
-							<div class="copy">&copy; 2019 All rights reserved</div>
-							<div class="info">
-								<p>The goal of this tool is to track historical token holders information. Additionally, we try to bring together a community of analysts that will join forces in finding new Uniswap gems. </p>
-							</div>
-							<div class="empis"><a href="https://empis.ru/">Developer - EMPIS</a></div>
-						</div>
-					</div>
-					<div class="col-md-5">
-						<div class="fsocials">	
-
-								<div class="footer__socials"><a href="" style="background-image: url(../images/ftwitter.png);">TWITTER</a></div>
-						
-									<div class="footer__socials"><a href=""  style="background-image: url(../images/fmail.png);">bitcoin@mail.ru</a></div>
-					
-						</div>
-					
-					</div>
-					
-				</div>
-			</div>
-		</div>
-		
-	  </footer>
-	  
-      <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-      <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-	   <script type="text/javascript" src="/js/jquery.floatThead.min.js"></script>
-      <script type="text/javascript" src="/js/slick.min.js"></script>
-      <script src="/js/maskedinput.js"></script>
-      <script type="text/javascript" src="/js/main.js"></script>
-   </body>
+            
+            <div class="paginator">
+              <div class="paginator__content">
+                <div class="paginator__title">Pages: </div>
+                <div class="paginator__items">
+                  <ul>
+                    <li class="active"><a href=""><span>1</span></a></li>
+                    <li><a href=""><span>2</span></a></li>
+                    <li><a href=""><span>3</span></a></li>
+                    <li><span>...</span></li>
+                    <li><a href=""><span>23</span></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer" class="footer">
+      <div class="footer__top">
+        <div class="container">
+          <div class="subscribe">
+            <div class="subscribe__title">
+              <span>You think this product can be improved? Write us a message.</span>
+            </div>
+            <div class="subscribe__form">
+              <form action="">
+                <!--<div class="subscribe__input"><input type="email" placeholder="Your e-mail"></div>-->
+                <div class="suscribe__btn"><input type="submit" class="btn-main" value="Contact"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__main">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="footer__info">
+                <div class="copy">&copy; 2019 All rights reserved</div>
+                <div class="info">
+                  <p>The goal of this tool is to track historical token holders information. Additionally, we try to bring together a community of analysts that will join forces in finding new Uniswap gems. </p>
+                </div>
+                <div class="empis"><a href="https://empis.ru/" target="_blank">Developer - EMPIS</a></div>
+              </div>
+            </div>
+            <div class="col-md-5">
+              <div class="fsocials">
+                <div class="footer__socials"><a href="" style="background-image: url(../images/ftwitter.png);">TWITTER</a></div>
+                <div class="footer__socials"><a href=""  style="background-image: url(../images/fmail.png);">bitcoin@mail.ru</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/jquery-1.9.1.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.floatThead.min.js"></script><script src="/libs/lightbox/js/lightbox.min.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
