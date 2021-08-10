@@ -17,6 +17,8 @@ $(document).ready(function () {
   });
 
 
+
+
   $(document).mouseup(function(e) 
 {
     var container = $(".search");
@@ -28,6 +30,16 @@ $(document).ready(function () {
         container.hide();
     }
 });
+
+
+  jQuery("a.scrollto").click(function() {
+        elementClick = jQuery(this).attr("href")
+        destination = jQuery(elementClick).offset().top - 90;
+        jQuery("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 1100);
+        return false;
+    });
 
 
 

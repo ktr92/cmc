@@ -1944,7 +1944,75 @@ td.column7 span,td.column6 span
     padding:  40px 0;
 }
 
+.navs__items {
+    display: flex;
+    align-items: center;
+    margin: 0 -5px;
+}
+.navs {
+    margin-bottom: 30px;
+}
+.navs__item {
+    padding: 0 5px;
+}
+
+.navs__item a  {
+  display: block;
+  text-align: center;
+  border: 1px solid #d3e4e1;
+  border-radius: 4px;
+  font-size: 16px;
+  color: rgb(122, 130, 130);
+    height: 30px;
+    width: 48px;
+    line-height: 28px;
+    text-decoration: none;
+}
+.navs__item.active a, .navs__item a:hover {
+    color: #fff;
+    background: #14c393;
+      text-decoration: none;
+        border: 1px solid #14c393;
+}
+.maintable__title {
+    margin: 20px 0 5px 0;
+  font-size: 24px;
+  color: #8f9c99;
+  line-height: 1.958;
+ font-weight: bold;
+
+}
+
+
+.infotext p{
+  font-size: 18px;
+  color: rgb(51, 51, 51);
+  line-height: 1.333;
+  text-align: left;
+
+}
+
+.imagegallery {
+    margin-bottom: 150px;
+    box-shadow: 0px 0 16px 0px #ccc;
+    float: right;
+    position: relative;
+}
+.imagegallery > span {
+     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.lb-data .lb-number {
+    display: none !important;
+}
 @media (max-width: 1280px) {
+
+.imagegallery {
+    margin-bottom: 30px;
+  
+}
     .mainmenu ul li {
     padding: 0 5px;
 } 
@@ -1956,6 +2024,12 @@ td.column7 span,td.column6 span
 }
     .filterblock__item {
         padding: 0 3px;
+    }
+    .navs__items {
+        flex-wrap: wrap;
+    }
+    .navs__item {
+        margin-bottom: 10px;
     }
 }
 

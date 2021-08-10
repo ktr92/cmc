@@ -11,6 +11,8 @@
       <link rel="stylesheet" type="text/css" href="/css/slick-theme.css">
       <link rel="stylesheet" type="text/css" href="/libs/lightbox/css/lightbox.min.css">
       <link rel="stylesheet" href="/css/animation.css">
+      <link rel="stylesheet" href="/libs/lightbox/css/lightbox.min.css">
+      
       <link rel="stylesheet" type="text/css" href="/css/main.css">
       <!--[if lt IE 9]>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -34,7 +36,7 @@
 									<ul>
 										<li><a href=""><span>Holder Count analytics</span></a></li>
 										<li><a href=""><span>Top holder gainers</span></a></li>
-										<li class="active"><a href=""><img src="/images/star.png" alt=""><span>my watch list</span></a></li>
+										<li><a href=""><img src="/images/star.png" alt=""><span>my watch list</span></a></li>
 									</ul>
 								</div>
 							</div>
@@ -86,13 +88,11 @@
 								<div class="login">
 									<div class="login__items">
 										<div class="login__name">
-											<a href="">
-												<img src="/images/login.png" alt=""><span>Ivan77</span>
+											<a href="#modalAuth" data-toggle="modal">
+												<span>Sign In</span>
 											</a>
 										</div>
-										<div class="login__out">
-											<a href="">Sign out</a></div>
-									</div>
+										
 								</div>
 							</div>
 						</div>
@@ -105,7 +105,7 @@
 				<div class="title">
 					<div class="row">
 							<div class="col-md-8">
-								<h1>My Watch List</h1>
+								<h1>Holder Count Analytics</h1>
 							</div>
 						
 					</div>
@@ -114,8 +114,24 @@
 			
 				
 				<div class="content__main">
-					<div class="infotext">No projects in your watchlist.</div>
-					<div class="imagebig"><img src="/images/img6.png" alt=""></div>	
+
+					<div class="row">
+						<div class="col-md-5">
+							<div class="infotext">
+								<p>We track historical holder count information of Uniswap tokens. This is a forward looking indicator. Very often the number of token holders increases before the price.</p>
+								<p>We also have a private Telegram group, where members of our community talk about interesting projects they found using our tool. </p>
+								<p>To get a 3 days free trial, please contact us on Telegram (Contact Button). </p>
+							</div>
+						</div>
+						<div class="col-md-7">
+							<div class="imagegallery">
+								<a href="/images/image1.png" data-lightbox="gallery1"><img src="/images/image1.png" alt=""></a>
+								<span><a href="/images/image1.png" data-lightbox="gallery1"><img src="/images/zoom.png" alt=""></a></span>
+							</div>
+						</div>
+					</div>
+					
+					
 				</div>
 			</div>
 		</div>
@@ -172,6 +188,7 @@
 	   <script type="text/javascript" src="/js/jquery.floatThead.min.js"></script>
       <script type="text/javascript" src="/js/slick.min.js"></script>
       <script src="/js/maskedinput.js"></script>
+      <script type="text/javascript" src="/libs/lightbox/js/lightbox.min.js"></script>
       <script type="text/javascript" src="/js/main.js"></script>
    </body>
 </html>
