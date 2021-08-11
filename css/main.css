@@ -1745,12 +1745,32 @@ span.valueitems__item {
 
 }
 
-span.values:hover {
+span.values.active {
     width: initial;
     z-index: 3;
     top: 0px;
 }
 
+#lightboxOverlay {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+#lightbox {
+  position: fixed !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+@media (min-width: 1024px) {
+    span.values:hover {
+        width: initial;
+        z-index: 3;
+        top: 0px;
+    }
+}
 
 span.dates {
        width: 35px;

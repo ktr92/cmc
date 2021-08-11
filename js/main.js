@@ -5,10 +5,18 @@ $(document).ready(function() {
          $(".sticky-header").floatThead({top:0});
     });
     } else {
+
+          $('span.values').click(function(e) {
+                $(this).toggleClass('active');
+            });
+
+         $('.searchbutton').click(function(e) {
+            $('.search').slideToggle();
+        });
         
         $(document).mouseup(function(e) {
             var container = $(".search");
-            var ext = $(".searchbutton");
+            var ext = $(".search");
 
             // if the target of the click isn't the container nor a descendant of the container
             if (!ext.is(e.target) && !container.is(e.target) && ext.has(e.target).length === 0) {
@@ -18,16 +26,14 @@ $(document).ready(function() {
 
     }
 
-    $('.menubutton').click(function(e) {
+  
+
+   $('.menubutton').click(function(e) {
         $('.mainmenu').toggle('slide');
     });
 
-    $('.searchbutton').click(function(e) {
-        $('.search').slideToggle();
-    });
-    $('.closesearch').click(function(e) {
-        $('.search').slideToggle();
-    });
+   
+   
 
 
     $('.filter__title').click(function(e) {
