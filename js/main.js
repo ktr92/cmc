@@ -6,6 +6,12 @@ $(document).ready(function() {
     });
     } else {
 
+        
+    $('.filter__title').click(function(e) {
+        $('.filter__form').slideToggle();
+    });
+
+
           $('span.values').click(function(e) {
                 $(this).toggleClass('active');
             });
@@ -35,10 +41,6 @@ $(document).ready(function() {
    
    
 
-
-    $('.filter__title').click(function(e) {
-        $('.filter__form').slideToggle();
-    });
 
 
 
