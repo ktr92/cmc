@@ -865,9 +865,9 @@ text-align: right;
 }
 
 .subscribe__title {
-	background-image: url(../images/subscribe.png);
+	background-image: url(../images/email.svg);
 	background-repeat: no-repeat;
-	background-size: initial;
+	background-size: 40px;
 	background-position: left center;
   font-size: 24px;
   color: rgb(0, 0, 0);
@@ -961,11 +961,11 @@ text-align: right;
 	
 	
 }
-.footer__socials  a{
+.footer__socials a{
   font-size: 13px;
   color: rgb(0, 0, 0);
  margin-bottom: 15px;
- 		padding: 10px 0 10px 30px;
+ 		padding: 10px 0 10px 5px;
 	background-repeat: no-repeat;
 	background-size: initial;
 	background-position: left center;
@@ -1474,9 +1474,9 @@ a, a * {
         vertical-align: text-bottom;
 }
 
-.mainmenu ul li a > img {
-    padding-right: 7px;
-    padding-bottom: 4px;
+.mainmenu ul li a > svg {
+    margin-right: 7px;
+    margin-bottom: 4px;
 }
 
 .mainmenu ul li a:hover span {
@@ -1508,8 +1508,8 @@ a, a * {
 
 }
 
-.login__name a img {
-    padding-right: 5px;
+.login__name a svg {
+    margin-right: 5px;
 }
 
 .login__name a {
@@ -1722,8 +1722,90 @@ span.values_none {
     line-height: 30px;
 
 }
+.socials__item svg {
+    width: 19px;
+}
+.socials__item svg path {
+    fill: #fff;
+}
+.login svg {
+    width: 18px;
+}
+.login svg path {
+    fill: #fff;
+}
+
+.hcolumn10 svg {
+    width: 17px;
+    height: 17px;
+}
+.hcolumn10 svg path {
+    fill: #fff;
+}
 
 
+.column10 svg {
+    width: 17px;
+    height: 17px;
+}
+.column10 svg path {
+}
+
+
+.column10 a.wadded svg {
+   width: 17px;
+    height: 17px;
+}
+
+.column10 a.wadded svg path {
+  fill: #e7cf00;
+}
+
+.column10 a.wadded.remove svg {
+   width: 17px;
+    height: 17px;
+}
+
+.column10 a.wadded.remove svg path {
+  fill: #f1478b;
+}
+
+.fsocial__icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #333;
+    display: flex;
+    align-items: center;
+   justify-content: center;
+}
+
+.fsocial__icon svg {
+    width: 13px;
+    height: 13px;
+}
+.fsocial__icon svg path {
+    fill: #fff;
+}
+.fsocial__icon svg polygon {
+    fill: #fff;
+}
+
+.footer__socials a {
+    display: flex;
+    align-items: center;
+}
+.fsocial__name {
+    padding-left: 5px;
+}
+
+.mainmenu ul li a > svg {
+     width: 17px;
+    height: 17px;
+}
+.mainmenu ul li svg path {
+   fill: #fff;
+}
 
 .maintable span.valueitems {
     display: flex;
@@ -1911,6 +1993,18 @@ span.searchbutton {
     min-height: 400px;
 }
 
+svg {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.menubutton svg path {
+    fill: #fff;
+}
+
+.menubutton {
+    width: 21px;
+}
 
 main ::-webkit-scrollbar {
     height: 3px;
@@ -2136,13 +2230,17 @@ button.close  {
   
 }
     .mainmenu ul li {
-    padding: 0 5px;
+    padding: 0 15px;
 } 
 .mainmenu ul {
-    margin: 0 -5px;
+    margin: 0 -15px;
 }
 .logo {
     display: none;
+}
+
+.search {
+    width: 230px;
 }
     .filterblock__item {
         padding: 0 3px;
@@ -2153,9 +2251,20 @@ button.close  {
     .navs__item {
         margin-bottom: 10px;
     }
+    .container {
+        max-width: 990px;
+        overflow: hidden;
+    }
+    .headeritems__logo {
+        padding: 0;
+    }
 }
 
 @media (max-width: 1023px) {
+
+
+
+
     .modal-body {
     padding: 15px;
 }
@@ -2198,7 +2307,7 @@ button.close  {
     white-space: nowrap;
 }
 
-    .menubutton svg path {
+    .menubutton svg rect {
         fill: #fff;
     }
     .logo {
@@ -2217,7 +2326,7 @@ button.close  {
         display: block;
         position: absolute;
         left: 11px;
-        top: 15px;
+        top: 13px;
         z-index: 10;
     }
     .socials__item a {
@@ -2295,9 +2404,12 @@ button.close  {
     }
     .filter__title {
         padding-left: 34px;
-        background-image: url(/images/filter.png);
+        background-image: url(../images/filter.svg);
         background-repeat: no-repeat;
         background-position: center left;
+        background-size: 23px;
+        min-height: 23px;
+        line-height: 23px;
     }
     .filter__form {
         display: none;
