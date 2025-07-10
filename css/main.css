@@ -776,14 +776,14 @@ span.values {
 
 
 span.values_up:after {
-	content: url(../images/up.png);
+	content: url(images/up.png);
 	position: absolute;
 	left: 1px;
 	top: -9px;
 }
 
 span.values_down:after {
-	content: url(../images/down.png);
+	content: url(images/down.png);
 	position: absolute;
 	left: 1px;
 	top: -9px;
@@ -865,7 +865,7 @@ text-align: right;
 }
 
 .subscribe__title {
-	background-image: url(../images/email.svg);
+	background-image: url(images/email.svg);
 	background-repeat: no-repeat;
 	background-size: 40px;
 	background-position: left center;
@@ -2404,7 +2404,7 @@ button.close  {
     }
     .filter__title {
         padding-left: 34px;
-        background-image: url(../images/filter.svg);
+        background-image: url(images/filter.svg);
         background-repeat: no-repeat;
         background-position: center left;
         background-size: 23px;
